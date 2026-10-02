@@ -1,0 +1,14 @@
+# The dsh-tool-media bundle patch: one insert adding the ffmpeg tool suite.
+#
+# ffmpeg locations are configured by overriding this row in the profile's own
+# cordis.patch.yml (the last write wins per row):
+#
+#   - id: tool-media
+#     config:
+#       ffmpegPath: C:/AI/ffmpeg/ffmpeg-release-full/bin/ffmpeg.exe
+#       ffprobePath: C:/AI/ffmpeg/ffmpeg-release-full/bin/ffprobe.exe
+#       outputDir: C:/Users/<you>/Videos/media-output
+
+- insert:
+    - id: tool-media
+      name: dsh-tool-media
